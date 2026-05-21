@@ -15,7 +15,7 @@
    → Overview of algorithms and how to use
 
 2. Install: Follow INSTALLATION.txt (2 minutes)
-   → pip install -r requirements.txt
+   → uv pip install -r requirements.txt
    → python main.py
 
 3. Learn: Read README.md (10 minutes)
@@ -42,7 +42,7 @@ quickstart.py                     → Smart startup with diagnostics
     Purpose: Auto-installs dependencies, checks system
 
 requirements.txt                 → Python dependencies
-    Use: pip install -r requirements.txt
+    Use: uv pip install -r requirements.txt
     Purpose: Specifies matplotlib and numpy versions
 
 
@@ -273,7 +273,7 @@ TOTAL: 11/11 Requirements ✅
    (Should be 3.7+)
 
 2. Install dependencies:
-   $ pip install -r requirements.txt
+   $ uv pip install -r requirements.txt
 
 3. Or use automatic setup:
    $ python quickstart.py
@@ -350,7 +350,7 @@ What's wrong?                   → INSTALLATION.txt (Troubleshooting)
 
 1. Read this file to understand organization
 2. Follow Quick Start in README.md
-3. Install with: pip install -r requirements.txt
+3. Install with: uv pip install -r requirements.txt
 4. Launch with: python main.py
 5. Try the GUI with sample data
 6. Run test_scenarios.py to see examples

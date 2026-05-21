@@ -526,7 +526,7 @@ Common Errors and Solutions:
 ───────────────────────────
 
 1. ModuleNotFoundError: No module named 'matplotlib'
-   Solution: pip install matplotlib
+   Solution: uv pip install matplotlib
 
 2. ValueError: Process list cannot be empty
    Solution: Add at least one process before running

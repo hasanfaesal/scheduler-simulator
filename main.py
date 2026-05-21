@@ -112,8 +112,8 @@ def run_gui():
     except ImportError as e:
         print(f"❌ Import Error: {e}")
         print("\nPlease ensure all required packages are installed:")
-        print("  pip install matplotlib")
-        print("  pip install numpy")
+        print("  uv pip install matplotlib")
+        print("  uv pip install numpy")
         sys.exit(1)
     except Exception as e:
         print(f"❌ Error: {e}")

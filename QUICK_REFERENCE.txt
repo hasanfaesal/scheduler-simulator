@@ -12,7 +12,7 @@ Install & Run (one command):
     python quickstart.py
 
 Or manually:
-    pip install -r requirements.txt
+    uv pip install -r requirements.txt
     python main.py
 
 
@@ -249,9 +249,9 @@ TROUBLESHOOTING QUICK FIXES
 
 Problem              Solution
 ─────────────────────────────────────────────────────────────
-No module error      pip install -r requirements.txt
+No module error      uv pip install -r requirements.txt
 GUI doesn't open    python quickstart.py (will diagnose)
-Chart doesn't show  Upgrade matplotlib: pip install --upgrade
+Chart doesn't show  Upgrade matplotlib: uv pip install --upgrade
 Invalid input       Use numeric values, positive numbers
 Process list empty  Add at least one process before Start
 Button grayed out   Click Start first to enable Pause/Resume

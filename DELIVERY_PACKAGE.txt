@@ -71,7 +71,7 @@ QUICK START (3 STEPS)
 ═════════════════════════════════════════════════════════════════════════════
 
 Step 1: Install Dependencies
-   $ pip install -r requirements.txt
+   $ uv pip install -r requirements.txt
 
 Step 2: Launch Application
    $ python main.py
@@ -213,7 +213,7 @@ INSTALLATION & DEPLOYMENT
 
 Minimum Requirements:
    • Python 3.7 or higher
-   • pip (Python package manager)
+   • [uv](https://docs.astral.sh/uv/) (Python package manager)
    • ~50 MB free disk space
 
 Installation Steps:
@@ -224,7 +224,7 @@ Installation Steps:
 
 2. Install Dependencies:
    $ cd "u:\6th sem\OS\CCP\os-scheduler"
-   $ pip install -r requirements.txt
+   $ uv pip install -r requirements.txt
    
    Or use automatic setup:
    $ python quickstart.py
@@ -505,13 +505,13 @@ If you encounter issues, refer to:
 Common Issues & Solutions:
 
 ModuleNotFoundError:
-   → Run: pip install -r requirements.txt
+   → Run: uv pip install -r requirements.txt
 
 GUI doesn't open:
    → Run: python quickstart.py (will diagnose)
 
 Chart doesn't display:
-   → Update matplotlib: pip install --upgrade matplotlib
+   → Update matplotlib: uv pip install --upgrade matplotlib
 
 Invalid input error:
    → Use numeric values, positive numbers only
@@ -531,7 +531,7 @@ Pre-Deployment:
 
 Deployment:
    ✓ Copy project folder
-   ✓ Run pip install -r requirements.txt
+   ✓ Run uv pip install -r requirements.txt
    ✓ Test with: python test_scenarios.py
    ✓ Launch with: python main.py
 

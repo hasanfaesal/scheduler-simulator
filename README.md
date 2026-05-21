@@ -72,7 +72,7 @@ os-scheduler/
 
 ### Prerequisites
 - Python 3.7+
-- pip (Python package manager)
+- [uv](https://docs.astral.sh/uv/) (Python package manager)
 
 ### Installation
 
@@ -83,7 +83,7 @@ cd os-scheduler
 
 2. Install dependencies:
 ```bash
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 ### Running the Application
@@ -219,13 +219,13 @@ Reason: Explicit priorities, need for priority handling
 ### Issue: "ModuleNotFoundError" when running
 **Solution**: Install required packages
 ```bash
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 ### Issue: Gantt chart doesn't display
 **Solution**: Ensure matplotlib and numpy are installed
 ```bash
-pip install --upgrade matplotlib numpy
+uv pip install --upgrade matplotlib numpy
 ```
 
 ### Issue: GUI appears frozen

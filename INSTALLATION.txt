@@ -67,15 +67,15 @@ Option B: Manual Installation
    $ cd "u:\6th sem\OS\CCP\os-scheduler"
    
 3. Install required packages:
-   $ pip install -r requirements.txt
+   $ uv pip install -r requirements.txt
    
    This installs:
    • matplotlib (version >= 3.5.0)
    • numpy (version >= 1.21.0)
    
 4. Verify installation:
-   $ python -m pip list | grep matplotlib
-   $ python -m pip list | grep numpy
+   $ uv pip list | grep matplotlib
+   $ uv pip list | grep numpy
 
 
 STEP 4: RUN THE APPLICATION
@@ -128,8 +128,8 @@ Problem 2: ModuleNotFoundError: No module named 'matplotlib'
 Error: ModuleNotFoundError or ImportError
 Solution:
 1. Ensure Python 3.7+ is used
-2. Run: pip install --upgrade pip
-3. Run: pip install matplotlib numpy
+2. Run: uv pip install --upgrade pip
+3. Run: uv pip install matplotlib numpy
 4. If using virtual environment, activate it first
 
 Problem 3: Permission denied on Linux/macOS
@@ -153,10 +153,10 @@ Problem 5: Chart visualization not working
 ──────────────────────────────────────────
 Error: Gantt chart doesn't display
 Solution:
-1. Upgrade matplotlib: pip install --upgrade matplotlib
+1. Upgrade matplotlib: uv pip install --upgrade matplotlib
 2. Check if display is available (on remote connections)
 3. Save chart instead: Use "Save Chart" button
-4. Verify numpy is installed: pip install numpy
+4. Verify numpy is installed: uv pip install numpy
 
 
 VIRTUAL ENVIRONMENT (Optional but Recommended)
@@ -168,7 +168,7 @@ Windows:
 ────────
 1. Create venv: python -m venv scheduler_env
 2. Activate: scheduler_env\Scripts\activate
-3. Install: pip install -r requirements.txt
+3. Install: uv pip install -r requirements.txt
 4. Run: python main.py
 5. Deactivate: deactivate
 
@@ -176,7 +176,7 @@ macOS/Linux:
 ────────────
 1. Create venv: python3 -m venv scheduler_env
 2. Activate: source scheduler_env/bin/activate
-3. Install: pip install -r requirements.txt
+3. Install: uv pip install -r requirements.txt
 4. Run: python main.py
 5. Deactivate: deactivate
 
@@ -266,7 +266,7 @@ UNINSTALL
 ═════════
 
 To uninstall dependencies:
-$ pip uninstall matplotlib numpy
+$ uv pip uninstall matplotlib numpy
 
 To remove virtual environment:
 Windows: rmdir /s scheduler_env
@@ -303,7 +303,7 @@ For issues:
 1. Check error messages in terminal
 2. Review troubleshooting section above
 3. Verify Python version: python --version
-4. Check dependencies: pip list
+4. Check dependencies: uv pip list
 5. Look at code comments and docstrings
 6. Review test_scenarios.py for usage examples
 

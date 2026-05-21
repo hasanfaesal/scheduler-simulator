@@ -42,12 +42,12 @@ def check_and_install_dependencies():
     if missing_packages:
         print(f"\n⚠️  Installing missing packages: {', '.join(missing_packages)}")
         try:
-            subprocess.check_call([sys.executable, '-m', 'pip', 'install'] + missing_packages)
+            subprocess.check_call(['uv', 'pip', 'install'] + missing_packages)
             print("✓ Dependencies installed successfully")
             return True
         except subprocess.CalledProcessError:
             print("❌ Failed to install dependencies")
-            print("   Please install manually: pip install -r requirements.txt")
+            print("   Please install manually: uv pip install -r requirements.txt")
             return False
     
     print("✓ All dependencies are installed")

@@ -1,0 +1,9 @@
+[project]
+name = "scheduler-simulator"
+version = "1.0.0"
+description = "OS Scheduler Simulator — CPU scheduling, memory management, concurrency, and IPC simulation"
+requires-python = ">=3.7"
+dependencies = [
+    "matplotlib>=3.5.0",
+    "numpy>=1.21.0",
+]

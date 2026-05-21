@@ -66,16 +66,43 @@ class OSSchedulerGUI:
         self.main_frame = ttk.Frame(self.root)
         self.main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         
-        # Left panel - Input and controls
-        left_frame = ttk.LabelFrame(self.main_frame, text="Process Management", padding=10)
-        left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=False, padx=(0, 10))
+        # Left panel - scrollable input and controls
+        left_container = ttk.Frame(self.main_frame)
+        left_container.pack(side=tk.LEFT, fill=tk.BOTH, expand=False, padx=(0, 10))
+        
+        # Scrollable canvas for left panel
+        self.left_canvas = tk.Canvas(left_container, bg='#f0f0f0', highlightthickness=0)
+        self.scrollbar = ttk.Scrollbar(left_container, orient=tk.VERTICAL, command=self.left_canvas.yview)
+        self.left_canvas.configure(yscrollcommand=self.scrollbar.set)
+        
+        self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        self.left_canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        
+        # Inner frame to hold all left-panel content
+        self.left_inner = ttk.Frame(self.left_canvas, padding=0)
+        self.left_canvas.create_window((0, 0), window=self.left_inner, anchor=tk.NW)
+        
+        # Bind canvas resize and content update
+        self.left_inner.bind("<Configure>", self._on_inner_configure)
         
         # Right panel - Results and visualization
         right_frame = ttk.LabelFrame(self.main_frame, text="Simulation Results", padding=10)
         right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
         
-        self._setup_input_panel(left_frame)
+        self._setup_input_panel(self.left_inner)
         self._setup_results_panel(right_frame)
+        
+        # Bind mousewheel scrolling on canvas
+        self.left_canvas.bind_all("<MouseWheel>", self._on_mousewheel)
+    
+    def _on_inner_configure(self, event=None):
+        """Update scroll region when inner frame changes size."""
+        self.left_canvas.configure(scrollregion=self.left_canvas.bbox("all"))
+        self.left_canvas.itemconfig("all", width=self.left_canvas.winfo_width())
+
+    def _on_mousewheel(self, event):
+        """Handle mousewheel scroll on the canvas."""
+        self.left_canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
         
     def _setup_input_panel(self, parent):
         """Setup the input panel for process creation."""

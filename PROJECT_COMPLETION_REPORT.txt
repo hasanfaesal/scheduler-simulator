@@ -201,7 +201,7 @@ USAGE QUICK START
 ════════════════════════════════════════════════════════════════════════════
 
 Installation:
-   1. pip install -r requirements.txt
+   1. uv pip install -r requirements.txt
    2. (or run: python quickstart.py)
 
 Launch:
@@ -297,7 +297,7 @@ HOW TO USE
 ════════════════════════════════════════════════════════════════════════════
 
 1. Installation
-   $ pip install -r requirements.txt
+   $ uv pip install -r requirements.txt
 
 2. Run Application
    $ python main.py

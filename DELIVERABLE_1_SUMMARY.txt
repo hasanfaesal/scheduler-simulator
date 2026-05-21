@@ -385,7 +385,7 @@ TOTAL: 30/30 Requirements Met ✅
 
 """
 Quick Start:
-1. Install dependencies: pip install -r requirements.txt
+1. Install dependencies: uv pip install -r requirements.txt
 2. Run application: python main.py
 
 Advanced:
